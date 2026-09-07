@@ -1,0 +1,24 @@
+# Categories for auto-generated release notes: GitHub sorts merged pull requests
+# into these by label, and everything unlabelled falls through to "Other".
+# Conventional-commit prefixes end up as labels via the repository's labeler or
+# by hand — the point is that `gh release create --generate-notes` produces a
+# readable changelog instead of a flat list.
+changelog:
+  exclude:
+    labels: [ignore-for-release]
+    authors: [dependabot, github-actions]
+  categories:
+    - title: Features
+      labels: [feature, enhancement, feat]
+    - title: Fixes
+      labels: [fix, bug]
+    - title: Security
+      labels: [security]
+    - title: Infrastructure and CI
+      labels: [ci, chore, build]
+    - title: Documentation
+      labels: [docs, documentation]
+    - title: Dependencies
+      labels: [dependencies]
+    - title: Other
+      labels: ["*"]
